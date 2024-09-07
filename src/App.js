@@ -1,8 +1,11 @@
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import appstore from "./utils/store/appstore";
 function App() {
   return (
-    <div className="flex align-middle justify-center text-fuchsia-500">
-      Flux
-    </div>
+    <Provider store={appstore}>
+      <Body />
+    </Provider>
   );
 }
 

@@ -1,7 +1,18 @@
 import React from "react";
 
 const QuoteListItem = ({ quoteData }) => {
-  const { symbol, name, change, changePercent, price } = quoteData;
+  if (
+    !quoteData ||
+    !quoteData.symbol ||
+    !quoteData.name ||
+    quoteData.price == null ||
+    quoteData.change == null ||
+    quoteData.changesPercentage == null
+  ) {
+    return null;
+  }
+
+  const { symbol, name, change, changesPercentage, price } = quoteData;
   const isNegative = change < 0;
 
   return (
@@ -46,7 +57,7 @@ const QuoteListItem = ({ quoteData }) => {
             isNegative ? "text-red-600" : "text-green-600"
           }`}
         >
-          {Math.abs(changePercent).toFixed(2)}%
+          {Math.abs(changesPercentage).toFixed(2)}%
         </div>
       </div>
     </div>

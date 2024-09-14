@@ -1,4 +1,4 @@
-export const stock = [
+export const stockLists = [
   {
     symbol: "AAPL",
     name: "Apple Inc.",
@@ -53,56 +53,14 @@ export const stock = [
     symbol: "MCD",
     name: "McDonald's Corporation",
   },
-  {
-    symbol: "RELIANCE",
-    name: "Reliance Industries Limited",
-  },
+
   {
     symbol: "TCS",
     name: "Tata Consultancy Services",
   },
-  {
-    symbol: "HDFCBANK",
-    name: "HDFC Bank Limited",
-  },
+
   {
     symbol: "INFY",
     name: "Infosys Limited",
-  },
-  {
-    symbol: "ICICIBANK",
-    name: "ICICI Bank Limited",
-  },
-  {
-    symbol: "SBIN",
-    name: "State Bank of India",
-  },
-  {
-    symbol: "BAJFINANCE",
-    name: "Bajaj Finance Limited",
-  },
-  {
-    symbol: "HINDUNILVR",
-    name: "Hindustan Unilever Limited",
-  },
-  {
-    symbol: "ITC",
-    name: "ITC Limited",
-  },
-  {
-    symbol: "LT",
-    name: "Larsen & Toubro Limited",
-  },
-  {
-    symbol: "BHARTIARTL",
-    name: "Bharti Airtel Limited",
-  },
-  {
-    symbol: "KOTAKBANK",
-    name: "Kotak Mahindra Bank Limited",
-  },
-  {
-    symbol: "ASIANPAINT",
-    name: "Asian Paints Limited",
   },
 ];

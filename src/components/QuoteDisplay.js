@@ -1,9 +1,22 @@
 import React from "react";
+import QuoteDisplayShimmer from "./Shimmer/QuoteDisplayShimmer";
 
 const QuoteDisplay = ({ quoteData }) => {
-  const { symbol, change, changePercent, price } = quoteData;
-  const isNegative = change < 0;
+  if (!quoteData) return <QuoteDisplayShimmer />;
 
+  if (
+    !quoteData.symbol ||
+    !quoteData.name ||
+    quoteData.price == null ||
+    quoteData.change == null ||
+    quoteData.changesPercentage == null
+  ) {
+    return null;
+  }
+
+  const { symbol, change, changesPercentage, price } = quoteData;
+  const isNegative = change < 0;
+  console.log(quoteData);
   return (
     <div
       className={`flex items-center justify-around space-x-2 px-2 rounded-md border border-gray-400 shadow-md md:w-40 md:h-12 h-10 bg-white`}
@@ -27,7 +40,7 @@ const QuoteDisplay = ({ quoteData }) => {
             isNegative ? "text-red-600" : "text-green-600"
           }`}
         >
-          {changePercent.toFixed(2)}%
+          {changesPercentage.toFixed(2)}%
         </div>
         <div
           className={`md:text-xs text-[0.6rem] ${

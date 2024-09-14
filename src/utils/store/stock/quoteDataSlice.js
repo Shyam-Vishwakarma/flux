@@ -16,7 +16,6 @@ export const quoteDataSlice = createSlice({
     fetchQuoteDataSuccess(state, action) {
       state.status = "succeeded";
       const { symbol } = action.payload[0];
-      console.log(action.payload[0]);
       state.data[symbol] = action.payload[0];
     },
     fetchQuoteDataFailure(state, action) {

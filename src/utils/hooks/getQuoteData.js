@@ -16,7 +16,6 @@ export const useQuoteData = (symbols) => {
     async (symbol) => {
       if (data[symbol] || fetchedSymbols.current.has(symbol)) return;
       try {
-        console.log(`Fetching data for ${symbol}`);
         const response = await fetch(`${FLUX}/api/stocks/${symbol}/quote`);
         const result = await response.json();
         // if (isMounted.current) {
@@ -31,8 +30,6 @@ export const useQuoteData = (symbols) => {
   );
 
   useEffect(() => {
-    console.log("useEffect running with symbols to fetch:", symbols);
-
     const symbolsToFetch = symbols.filter(
       (symbol) => !data[symbol] && !fetchedSymbols.current.has(symbol)
     );
@@ -40,7 +37,6 @@ export const useQuoteData = (symbols) => {
     const fetchAllData = async () => {
       for (let i = 0; i < symbolsToFetch.length; i += BATCH_SIZE) {
         const batch = symbolsToFetch.slice(i, i + BATCH_SIZE);
-        console.log(`Processing batch: ${batch.join(", ")}`);
 
         await Promise.all(batch.map((symbol) => fetchQuoteData(symbol)));
 

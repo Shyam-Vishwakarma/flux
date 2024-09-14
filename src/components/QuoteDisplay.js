@@ -16,7 +16,6 @@ const QuoteDisplay = ({ quoteData }) => {
 
   const { symbol, change, changesPercentage, price } = quoteData;
   const isNegative = change < 0;
-  console.log(quoteData);
   return (
     <div
       className={`flex items-center justify-around space-x-2 px-2 rounded-md border border-gray-400 shadow-md md:w-40 md:h-12 h-10 bg-white`}

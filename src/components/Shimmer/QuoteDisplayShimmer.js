@@ -5,10 +5,6 @@ const QuoteDisplayShimmer = () => {
   return (
     <>
       <QdShimmer />
-      <QdShimmer />
-      <QdShimmer />
-      <QdShimmer />
-      <QdShimmer />
     </>
   );
 };

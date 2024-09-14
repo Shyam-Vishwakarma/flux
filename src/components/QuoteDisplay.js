@@ -1,8 +1,12 @@
 import React from "react";
 import QuoteDisplayShimmer from "./Shimmer/QuoteDisplayShimmer";
+import { useSelector } from "react-redux";
 
-const QuoteDisplay = ({ quoteData }) => {
-  if (!quoteData) return <QuoteDisplayShimmer />;
+const QuoteDisplay = ({ symbol }) => {
+  const data = useSelector((store) => store.quoteData.data);
+
+  if (!data[symbol]) return <QuoteDisplayShimmer />;
+  const quoteData = data[symbol];
 
   if (
     !quoteData.symbol ||
@@ -14,7 +18,7 @@ const QuoteDisplay = ({ quoteData }) => {
     return null;
   }
 
-  const { symbol, change, changesPercentage, price } = quoteData;
+  const { change, changesPercentage, price } = quoteData;
   const isNegative = change < 0;
   return (
     <div

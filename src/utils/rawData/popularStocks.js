@@ -1,5 +1,9 @@
 export const stockLists = [
   {
+    symbol: "GOOGL",
+    name: "Alphabet Inc. (Class A)",
+  },
+  {
     symbol: "AAPL",
     name: "Apple Inc.",
   },
@@ -10,10 +14,6 @@ export const stockLists = [
   {
     symbol: "AMZN",
     name: "Amazon.com, Inc.",
-  },
-  {
-    symbol: "GOOGL",
-    name: "Alphabet Inc. (Class A)",
   },
   {
     symbol: "TSLA",
@@ -31,12 +31,10 @@ export const stockLists = [
     symbol: "JPM",
     name: "JPMorgan Chase & Co.",
   },
-
   {
     symbol: "DIS",
     name: "The Walt Disney Company",
   },
-
   {
     symbol: "INTC",
     name: "Intel Corporation",
@@ -53,14 +51,48 @@ export const stockLists = [
     symbol: "MCD",
     name: "McDonald's Corporation",
   },
-
   {
     symbol: "TCS",
     name: "Tata Consultancy Services",
   },
-
   {
     symbol: "INFY",
     name: "Infosys Limited",
+  },
+  {
+    symbol: "NFLX",
+    name: "Netflix, Inc.",
+  },
+  {
+    symbol: "BABA",
+    name: "Alibaba Group Holding Limited",
+  },
+  {
+    symbol: "ORCL",
+    name: "Oracle Corporation",
+  },
+  {
+    symbol: "WMT",
+    name: "Walmart Inc.",
+  },
+  {
+    symbol: "V",
+    name: "Visa Inc.",
+  },
+  {
+    symbol: "TWTR",
+    name: "Twitter, Inc.",
+  },
+  {
+    symbol: "AMZN",
+    name: "Amazon.com, Inc.",
+  },
+  {
+    symbol: "GS",
+    name: "The Goldman Sachs Group, Inc.",
+  },
+  {
+    symbol: "CVLT",
+    name: "Commvault Systems, Inc.",
   },
 ];

@@ -4,16 +4,6 @@ const QuoteListItemShimmer = () => {
   return (
     <>
       <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
-      <QlShimmer />
     </>
   );
 };

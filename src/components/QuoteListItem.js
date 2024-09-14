@@ -1,6 +1,13 @@
 import React from "react";
+import QuoteListItemShimmer from "./Shimmer/QuoteListItemShimmer";
+import { useSelector } from "react-redux";
 
-const QuoteListItem = ({ quoteData }) => {
+const QuoteListItem = ({ symbol }) => {
+  const data = useSelector((store) => store.quoteData.data);
+
+  if (!data[symbol]) return <QuoteListItemShimmer />;
+  const quoteData = data[symbol];
+
   if (
     !quoteData ||
     !quoteData.symbol ||
@@ -12,7 +19,7 @@ const QuoteListItem = ({ quoteData }) => {
     return null;
   }
 
-  const { symbol, name, change, changesPercentage, price } = quoteData;
+  const { name, change, changesPercentage, price } = quoteData;
   const isNegative = change < 0;
 
   return (

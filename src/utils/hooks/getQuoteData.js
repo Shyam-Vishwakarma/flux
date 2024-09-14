@@ -3,8 +3,8 @@ import { useEffect, useCallback, useRef } from "react";
 import { FLUX } from "../constants";
 import { fetchQuoteDataSuccess } from "../store/stock/quoteDataSlice";
 
-const BATCH_SIZE = 1; // Number of symbols to fetch in each batch
-const DELAY_BETWEEN_BATCHES = 1000; // Delay in milliseconds between batches
+const BATCH_SIZE = 1;
+const DELAY_BETWEEN_BATCHES = 1000;
 
 export const useQuoteData = (symbols) => {
   const dispatch = useDispatch();
